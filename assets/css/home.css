@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+    font-family: sans-serif;
+    background-color: whitesmoke;
+    font-family: 'Dosis';
+}
+.main-layout{
+    width: 500px;
+    height: 80vh;
+    /* border: 1px solid orange; */
+    background-color: whitesmoke;
+    box-shadow: -3px -3px 7px rgb(145, 144, 144), 3px 3px 7px white;
+    border-radius: 20px;
+}
+/***********************************************/
+.heading{
+    width: 100%;
+    height: 30px;
+    /* border: 1px solid green; */
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    color: rgb(60, 61, 61);
+    font-family: 'Poppins';
+}
+/***********************************************/
+/*****************FORM**************************/
+.textbox{
+    width: 100%;
+    height: 75px;
+    /* border: 1px solid red; */
+    
+    margin-bottom: 10px;
+}
+/****textbox inner details******/
+#todo-desc{
+    font-size: 1.1rem;
+    resize: none;
+    width: 100%;
+    height: 70px;
+    background-color: whitesmoke;
+}
+#todo-desc:focus{
+    outline: none;
+}
+/***************************************************/
+.preference{
+    padding-top: 5px;
+    width: 100%;
+    height: 30px;
+    /* border: 1px solid violet; */
+    margin-bottom: 15px;
+    justify-content: space-around;
+    display: flex;
+}
+#category{
+    display: inline-block;
+}
+#date{
+    display: inline-block;
+    height: 2px;
+}
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+/****Buttons******/
+.buttons{
+    width: 100%;
+    height: 30px;
+    /* border: 1px solid olive; */
+    margin-bottom: 25px;
+    justify-content: space-around;
+    display: flex;
+}
+#add{
+    display: inline-block;
+}
+#add-icon{
+    width: 20px !important;
+    height: 20px;
+    color: rgb(83, 153, 81);
+}
+
+#add-task{
+    font-size: 1rem;
+    height: auto;
+    width: auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: -40px;
+    margin-top: 10px;
+}
+#delete-icon{
+    width: 20px !important;
+    height: 20px;
+    color: rgb(185, 61, 61);
+}
+#delete{
+    display: inline-block;
+}
+#delete-task{
+    font-size: 1rem;
+    height: auto;
+    width: auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#delete-task:focus, #add-task:focus{
+    outline: none;
+}
+
+/***********************************************/
+.list-box{
+    width: 100%;
+    height: auto;
+    max-height: 195px;
+    /* border: 1px solid rebeccapurple; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+/****listitems******/
+.list{
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid pink; */
+    align-items: center;
+    display: flex;
+    padding-bottom: 5px;
+    border-top: 0.7px solid rgb(155, 154, 154);
+    box-shadow: 3px 3px 7px white, -3px -3px 7px rgb(80, 79, 79);
+}
+/****checkbox placement******/
+#box{
+    width: 10px;
+    height: 10px;
+    /* border: 1px solid green; */
+    margin-left: 5px;
+    display: inline-block;
+}
+/****date******/
+#list-date{
+    margin-left: 3%;
+    display: inline-block;
+}
+/****category******/
+#list-category{
+    margin-left: 5%;
+    display: inline-block;
+    height: 90%;
+    width: 70px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 7px;
+    /* border: 1px solid red; */
+}
+/****task******/
+#list-task{
+    width: 240px;
+    /* border: 1px solid green; */
+    height: 100%;
+    margin-left: 5%;
+    padding-top: 3px;
+    text-align: start;
+    overflow: overlay;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    display: flex;
+}
+/****scrollbar******/
+#list-task::-webkit-scrollbar { /* WebKit */
+    width: 7px;
+    height: auto;
+}
+/* Track */
+#list-task::-webkit-scrollbar-track {
+  box-shadow: transparent;
+}
+/* Handle */
+#list-task::-webkit-scrollbar-thumb {
+  background:  rgb(170, 170, 170); 
+  border-radius: 7px;
+}
+
+.list-box::-webkit-scrollbar { /* WebKit */
+    width: 7px;
+    height: auto;
+}
+/* Track */
+.list-box::-webkit-scrollbar-track {
+  box-shadow: transparent;
+}
+/* Handle */
+.list-box::-webkit-scrollbar-thumb {
+  background:  rgb(187, 187, 187); 
+  border-radius: 7px;
+}

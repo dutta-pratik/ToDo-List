@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> </title>
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Poppins:700&display=swap" rel="stylesheet"></head>
+<body>
+    <div class="main-layout">
+        <div class="heading">
+            <h2><i class="fas fa-calendar-alt"></i> ToDo List</h2>
+        </div>
+        <!-- Form containing all elements -->
+        <form>
+            <div class="textbox">
+                <textarea name="task" id="todo-desc" cols="60" rows="6" placeholder="Enter your task (Required)"></textarea>
+            </div>
+            <div class="preference">
+                <div id="category">
+                    <p>Category</p>
+                    <select name="category" id="category-list">
+                        <option value="Personal" > Personal</option>
+                        <option value="Work" > Work</option>
+                        <option value="Important" > Important</option>
+                        <option value="Meeting" > Meeting</option>
+                        <option value="Casual" > Casual</option>
+                    </select>
+                </div>
+                <div id="date">
+                    <p>Date</p>
+                    <input type="date" id="datePicker" name="date">
+                </div>
+            </div>
+            <div class="buttons">
+                
+                <div id="add">
+                    
+                    <button id="add-task" formaction="/addtask" formmethod="POST">
+                        <strong>
+                            <i class="fas fa-calendar-plus fa-2x" id="add-icon"></i>
+                        </strong>
+                    </button>
+                    
+                </div>
+                
+                <div id="delete">
+                    <button id="delete-task" formmethod="GET" formaction="/deletetask">
+                        <strong>
+                            <i class="fas fa-calendar-minus fa-2x" id="delete-icon"></i>
+                        </strong>
+                    </button>
+                    
+                </div>
+                
+                
+            </div>
+<!-- List box which covers all the task -->
+            <div class="list-box">
+    
+                <% for(let i of list){ %>
+                    <div class="list">
+
+                    
+                        <div id="box">
+                            <input type="checkbox" value="<%= i.id %>" class="check">
+                        </div>
+                        <div id="list-task">
+                            <%= i.task %>
+                        </div>
+                        <div id="list-date">
+                            <%= i.date %>
+                        </div>
+                        <div id="list-category">
+                            <%= i.category %>
+                        </div>
+                        <br>
+                    </div>
+                <% }%>
+    
+            </div>
+
+        </form>
+
+        
+        
+        
+    </div>
+    <script src="/js/jquery-3.4.1.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="https://kit.fontawesome.com/44c6087d03.js" crossorigin="anonymous"></script>
+</body>
+</html>
